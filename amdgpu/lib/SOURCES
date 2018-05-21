@@ -4,7 +4,6 @@ math/native_log10.cl
 math/half_exp.cl
 math/half_exp10.cl
 math/half_exp2.cl
-math/half_log10.cl
 math/half_recip.cl
 math/half_rsqrt.cl
 math/half_sqrt.cl
