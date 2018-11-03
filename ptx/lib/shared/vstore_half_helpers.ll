@@ -1,3 +1,9 @@
+#ifdef __LP64__
+target datalayout="e-i64:64-v16:16-v32:32-n16:32:64"
+#else
+target datalayout="e-p:32:32-i64:64-v16:16-v32:32-n16:32:64"
+#endif
+
 define void @__clc_vstore_half_float_helper__private(float %data, half addrspace(0)* nocapture %ptr) nounwind alwaysinline {
   %res = fptrunc float %data to half
   store half %res, half addrspace(0)* %ptr

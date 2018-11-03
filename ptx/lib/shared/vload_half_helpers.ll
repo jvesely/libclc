@@ -1,3 +1,9 @@
+#ifdef __LP64__
+target datalayout="e-i64:64-v16:16-v32:32-n16:32:64"
+#else
+target datalayout="e-p:32:32-i64:64-v16:16-v32:32-n16:32:64"
+#endif
+
 define float @__clc_vload_half_float_helper__private(half addrspace(0)* nocapture %ptr) nounwind alwaysinline {
   %data = load half, half addrspace(0)* %ptr
   %res = fpext half %data to float
